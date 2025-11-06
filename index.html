@@ -3,28 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Senior Portfolio</title>
+  <title>Jeelyn Isles | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="schoolwork.html">School Work</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#work">My Work</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="content">
-      <img src="me.jpg" alt="My Photo" class="profile-pic">
-      <h1>Hi, I'm Jerelyn</h1>
+      <img src="me.jpg" alt="Jeelyn Isles" class="profile-pic">
+      <h1>Jeelyn Isles</h1>
       <h2>Welcome to My Senior Portfolio</h2>
+      <p class="scroll-hint">Scroll down to see my work ↓</p>
     </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work" class="work-section">
+    <h2>My Work</h2>
+    <div class="work-gallery">
+      <div class="work-item">
+        <img src="work1.jpg" alt="Project 1">
+        <p>Project 1 – Graphic Design</p>
+      </div>
+      <div class="work-item">
+        <img src="work2.jpg" alt="Project 2">
+        <p>Project 2 – Website Design</p>
+      </div>
+      <div class="work-item">
+        <img src="work3.jpg" alt="Project 3">
+        <p>Project 3 – Photography</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Email: <strong>jeelyn@example.com</strong></p>
   </section>
 </body>
 </html>
