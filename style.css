@@ -1,19 +1,53 @@
-/* === General Styling === */
+/* === General Page Styling === */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #000; /* black background */
-  color: #ff99cc; /* light pink text */
-  height: 100vh;
+  background-color: #000; /* Black background */
+  color: #ff99cc; /* Light pink text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Navigation Bar === */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff99cc;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+  text-shadow: 0 0 10px #ff66b2;
 }
 
 /* === Hero Section === */
 .hero {
   text-align: center;
-  padding: 20px;
+  padding-top: 120px; /* space for navbar */
+  padding-bottom: 40px;
 }
 
 /* === Profile Picture === */
@@ -22,7 +56,7 @@ body {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff66b2; /* darker pink border */
+  border: 3px solid #ff66b2;
   box-shadow: 0 0 20px #ff66b2;
   margin-bottom: 20px;
 }
@@ -30,7 +64,7 @@ body {
 /* === Headings === */
 h1 {
   font-size: 2.5em;
-  color: #ffb6d9; /* soft light pink */
+  color: #ffb6d9;
   margin-bottom: 10px;
   animation: fadeIn 2s ease-in;
 }
@@ -42,8 +76,16 @@ h2 {
   animation: fadeIn 3s ease-in;
 }
 
-/* === Animation for smooth fade-in === */
+/* === Fade-In Animation === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Page Content (for About, etc.) === */
+section.page-content {
+  text-align: center;
+  padding: 140px 20px 40px;
+  color: #ffb6d9;
+  max-width: 800px;
 }
