@@ -1,31 +1,27 @@
-/* === General Page Styling === */
+/* === Global Styles === */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #000; /* Black background */
-  color: #ff99cc; /* Light pink text */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #000;
+  color: #ff99cc;
 }
 
-/* === Navigation Bar === */
+/* === Navigation Bar (top right) === */
 nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 10px 0;
+  top: 20px;
+  right: 30px;
   z-index: 10;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -45,47 +41,118 @@ nav ul li a.active {
 
 /* === Hero Section === */
 .hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  padding-top: 120px; /* space for navbar */
-  padding-bottom: 40px;
+  padding: 20px;
 }
 
-/* === Profile Picture === */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff66b2;
-  box-shadow: 0 0 20px #ff66b2;
-  margin-bottom: 20px;
+  border: 4px solid #ff66b2;
+  box-shadow: 0 0 25px #ff66b2;
+  margin-bottom: 25px;
 }
 
-/* === Headings === */
 h1 {
-  font-size: 2.5em;
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
   color: #ffb6d9;
-  margin-bottom: 10px;
+  text-shadow: 0 0 20px #ff66b2;
+  margin: 10px 0;
   animation: fadeIn 2s ease-in;
 }
 
 h2 {
   font-size: 1.5em;
-  color: #ff66b2;
   font-weight: 300;
+  color: #ff66b2;
   animation: fadeIn 3s ease-in;
 }
 
-/* === Fade-In Animation === */
+.scroll-hint {
+  margin-top: 20px;
+  font-size: 1em;
+  opacity: 0.7;
+  animation: blink 1.5s infinite;
+}
+
+/* === Work Section === */
+.work-section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  background-color: #0a0a0a;
+  text-align: center;
+}
+
+.work-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffb6d9;
+  text-shadow: 0 0 15px #ff66b2;
+}
+
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.work-item {
+  width: 250px;
+  text-align: center;
+}
+
+.work-item img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ff66b2;
+  box-shadow: 0 0 15px #ff66b2;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff99cc;
+}
+
+.work-item p {
+  margin-top: 10px;
+  color: #ffb6d9;
+}
+
+/* === Contact Section === */
+.contact-section {
+  min-height: 60vh;
+  background-color: #000;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
+  color: #ffb6d9;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.2em;
+  color: #ff99cc;
+}
+
+/* === Animations === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === Page Content (for About, etc.) === */
-section.page-content {
-  text-align: center;
-  padding: 140px 20px 40px;
-  color: #ffb6d9;
-  max-width: 800px;
+@keyframes blink {
+  50% { opacity: 0.3; }
 }
