@@ -148,17 +148,38 @@ nav ul li a:hover {
   gap: 40px;
 }
 
-/* CLICKABLE WORK ITEM */
-.work-item {
-  display: block;              /* Makes the whole item clickable */
-  width: 280px;
-  text-decoration: none;       /* Remove underline */
-  color: inherit;              /* Keep text color */
-  transition: transform 0.3s ease;
+/* CLICKABLE IFRAME PREVIEW */
+.work-preview {
+  display: block;
+  width: 500px;
+  text-decoration: none;
+  color: #ffb6d9;
 }
 
-.work-item:hover {
+.work-preview iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  border: 2px solid #ff66b2;
+  filter: brightness(0.85);
+  transition: 0.3s ease;
+}
+
+.work-preview:hover iframe {
+  filter: brightness(1);
+  box-shadow: 0 0 25px #ff99cc;
   transform: scale(1.02);
+}
+
+.work-preview p {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* WORK ITEM IMAGES */
+.work-item {
+  width: 280px;
 }
 
 .work-item img {
