@@ -32,7 +32,7 @@ header {
 }
 
 nav {
-  margin-right: 50px; /* keeps nav visible and balanced */
+  margin-right: 50px;
 }
 
 nav ul {
@@ -148,8 +148,17 @@ nav ul li a:hover {
   gap: 40px;
 }
 
+/* CLICKABLE WORK ITEM */
 .work-item {
+  display: block;              /* Makes the whole item clickable */
   width: 280px;
+  text-decoration: none;       /* Remove underline */
+  color: inherit;              /* Keep text color */
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+  transform: scale(1.02);
 }
 
 .work-item img {
